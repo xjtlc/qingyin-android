@@ -1,0 +1,44 @@
+{
+  "userProvidedApk": "E:\\qq\\base.apk",
+  "sourceApkSha256": "3D14295CC6F21A1709DA324AEFB122BB0FE077B918EE0B52EE430F0BCA186DCE",
+  "preservedBaseline": "D:\\Users\\111\\Desktop\\codex\\qingyin-mobile-base080\\baseline\\Qingyin-0.8.0-rc1-original.apk",
+  "preservedBaselineSha256": "3D14295CC6F21A1709DA324AEFB122BB0FE077B918EE0B52EE430F0BCA186DCE",
+  "sourceVersion": "0.8.0-rc1",
+  "sourceVersionCode": 80,
+  "targetVersion": "0.8.0-rc8",
+  "targetVersionCode": 87,
+  "binaryEntries": [
+    {
+      "sourceEntry": "assets/node/runner.cjs",
+      "destination": "app/src/main/assets/node/runner.cjs",
+      "bytes": 1826176,
+      "sha256": "C05F86DDA0985E4996C0FBBE9BD44D04678F9288A182EA0783BF1BD448B8492A",
+      "matchesSource": true
+    },
+    {
+      "sourceEntry": "lib/arm64-v8a/libc++_shared.so",
+      "destination": "app/src/main/jniLibs/arm64-v8a/libc++_shared.so",
+      "bytes": 1330832,
+      "sha256": "83269B3124A287FAC36B17C9FB64BEB398C83DAD6677B19CE63CF80D09966FD7",
+      "matchesSource": true
+    },
+    {
+      "sourceEntry": "lib/arm64-v8a/libnode.so",
+      "destination": "app/src/main/jniLibs/arm64-v8a/libnode.so",
+      "bytes": 49522248,
+      "sha256": "CE00E709FE6B84C5A57B48CBCBA8549CF594D752D386A93A8B2C6B76FB9D021A",
+      "matchesSource": true
+    },
+    {
+      "sourceEntry": "lib/arm64-v8a/libqingyin_node.so",
+      "destination": "app/src/main/jniLibs/arm64-v8a/libqingyin_node.so",
+      "bytes": 1266760,
+      "sha256": "7BA2433EE997A0C4FD1EAB656AB38AC809718D5C49E98EC79AFB2A71DBD94DD2",
+      "matchesSource": true
+    }
+  ],
+  "resourceSource": "D:\\Users\\111\\Desktop\\codex\\qingyin-mobile-base080-decompiled\\app\\src\\main",
+  "originalBuildScriptsRecovered": false,
+  "privateKeyCopied": false,
+  "buildExecuted": true
+}

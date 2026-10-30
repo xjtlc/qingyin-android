@@ -1,0 +1,4 @@
+// Recreated build configuration. Original build scripts were unavailable.
+plugins {
+    id 'com.android.application' version '8.5.2' apply false
+}

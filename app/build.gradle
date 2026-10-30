@@ -1,0 +1,26 @@
+plugins { id 'com.android.application' }
+
+android {
+    namespace 'local.qingyin.mobile'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId 'local.qingyin.mobile'
+        minSdk 26
+        targetSdk 34
+        versionCode 89
+        versionName '0.8.0-rc10'
+        ndk { abiFilters 'arm64-v8a' }
+    }
+
+    // Node and its JNI host are preserved unchanged from the user's 0.8.0-rc1 APK.
+    // No native compilation is required, and the original C++ sources are absent.
+    sourceSets.main.jniLibs.srcDirs = ['src/main/jniLibs']
+    packaging { jniLibs { useLegacyPackaging = false } }
+    buildTypes { release { minifyEnabled false } }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+}
+
