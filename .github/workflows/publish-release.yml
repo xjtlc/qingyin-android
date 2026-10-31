@@ -1,0 +1,26 @@
+name: Publish Qingyin Android v0.8.0-rc17
+on:
+  push:
+    branches:
+      - apk-v0.8.0-rc17
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify the APK checksum
+        run: sha256sum -c SHA256SUMS.txt
+      - name: Create GitHub prerelease and upload the APK
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release create v0.8.0-rc17 ./Qingyin-Android-v0.8.0-rc17.apk \
+            --repo "$GITHUB_REPOSITORY" \
+            --target "$GITHUB_SHA" \
+            --title "Qingyin Android v0.8.0-rc17 (Test Build)" \
+            --notes "Android debug build for testing cloud favorites, discovery, playback and media controls. Cloud-favorite write actions and some device-specific lock-screen effects require further testing. SHA-256 is listed in SHA256SUMS.txt." \
+            --prerelease
